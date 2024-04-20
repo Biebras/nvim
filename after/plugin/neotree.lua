@@ -1,5 +1,8 @@
 vim.keymap.set("n", "<leader>fe", vim.cmd.Neotree)
 
+-- Create tab
+vim.keymap.set("n", "<leader>t", vim.cmd.tabnew)
+
 -- Fast tab switch
 vim.keymap.set("n", "<leader>1", "1gt", {silent = true})
 vim.keymap.set("n", "<leader>2", "2gt", {silent = true})
