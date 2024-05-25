@@ -4,60 +4,63 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
-  -- Fuzzy Finder
-  use 
-  {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.6',
-	  -- or                          , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+    -- Fuzzy Finder
+    use 
+    {
+        'nvim-telescope/telescope.nvim', tag = '0.1.6',
+        -- or                          , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-  -- Color Scheme
-  use 
-  { 
-	  "sainnhe/gruvbox-material",
-	  as = 'gruvbox-material',
-  }
+    -- Color Scheme
+    use 
+    { 
+        "sainnhe/gruvbox-material",
+        as = 'gruvbox-material',
+    }
 
-  -- Parser
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- Parser
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-  -- Autocorrect
-  use 
-  {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
-	  requires = 
-	  {
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+    -- Autocorrect
+    use 
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = 
+        {
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
 
-		  {'neovim/nvim-lspconfig'},
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'L3MON4D3/LuaSnip'},
-	  }
-  }
+            {'neovim/nvim-lspconfig'},
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
 
-  -- Better Undo
-  use('mbbill/undotree')
+    -- Better Undo
+    use('mbbill/undotree')
 
-  -- Git
-  use('tpope/vim-fugitive')
+    -- Git
+    use('tpope/vim-fugitive')
 
-  -- File Explorer
-  use {
-      "nvim-neo-tree/neo-tree.nvim",
-      branch = "v3.x",
-      requires = { 
-          "nvim-lua/plenary.nvim",
-          "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-          "MunifTanjim/nui.nvim",
-          -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-      }
-  }
+    -- File Explorer
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = { 
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
+    }
+
+    -- Python Env Pluging
+    use( 'HallerPatrick/py_lsp.nvim' )
 
 end)

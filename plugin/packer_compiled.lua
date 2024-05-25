@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/Users/sauliusvincevicius/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["py_lsp.nvim"] = {
+    loaded = true,
+    path = "/Users/sauliusvincevicius/.local/share/nvim/site/pack/packer/start/py_lsp.nvim",
+    url = "https://github.com/HallerPatrick/py_lsp.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/sauliusvincevicius/.local/share/nvim/site/pack/packer/start/telescope.nvim",
